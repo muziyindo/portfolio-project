@@ -1,0 +1,10 @@
+echo "# wordcount-project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/muziyindo/wordcount-project.git
+git push -u origin master
+
+
+
+git config --global user.name "FIRST_NAME LAST_NAME"
