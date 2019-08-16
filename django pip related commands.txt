@@ -1,0 +1,24 @@
+#install virtual env
+pip install virtualenv
+
+#create virtual env
+virtualenv myvenv #where myvenv is specifified virtual env name
+NB: Ensure both your virtual env and project directory are directly under same parent directory
+
+#to start/activate virtual virtual env on windows
+myvenv\scripts\activate
+
+#to stop/deactivate virtual env on windows
+enter "deactivate" on cmd
+
+#to create an app
+python manage.py startapp appName
+
+#when you add new models, you have to make migration for python to find it and before you make migration you also have to
+#add your app to the installed apps list under settings in your project folder
+
+NB: You need to install "pillow" with pip to work with images in python
+
+
+
+
