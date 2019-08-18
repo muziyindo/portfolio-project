@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jobs.apps.JobsConfig', #added this, "JobsConfig" name obtained from apps.py under jobs app
+    'blog.apps.BlogConfig', #added this, "BlogConfig" name obtained from apps.py under jobs app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,4 +128,4 @@ STATIC_URL = '/static/'
 #added this, MEDIA_ROOT means where media files(e.g images) should be saved, "os.path.join(BASE_DIR, 'media')" means it
 #should be saved in a "media" directory inside the base directory - portfolio-project
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = "/media/"
+MEDIA_URL = "/media/" #added this also
