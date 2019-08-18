@@ -19,6 +19,9 @@ python manage.py startapp appName
 
 NB: You need to install "pillow" with pip to work with images in python
 
+'''Python comes with some model(sql codes) that creates user,sessions, messages table that you will need, to add a user to the
+table,i.e after migrating, you do:''' 
+python manage.py createsuperuser
 
-
+#to work with postgresql on django, you need to install the module "psycopg2" with pip
 
