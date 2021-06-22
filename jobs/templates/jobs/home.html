@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+	{% load staticfiles %} <!--#must add this to load static files in this page-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,7 +48,7 @@
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Twitter</a></li>
-            <li><a href="#" class="text-white">Resume</a></li>
+            <li><a href="{% static 'resume.pdf' %}" class="text-white">Resume</a></li>
             <li><a href="{% url 'allblogs' %}" class="text-white">Blog</a></li>
           </ul>
         </div>
@@ -74,7 +75,8 @@
       <h1 class="jumbotron-heading">Hi, I'm Mueez</h1>
       <p class="lead text-muted">Hey my name is Mueez and i love to make django websites. It's the thrill of handling the requests that people wants.</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Email Me</a>
+        <a href="#" class="btn btn-primary my-2">Email Me</a><br>
+        <img src="{% static 'profile.jpg' %}" />
         <!--<a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
       </p>
     </div>
@@ -90,13 +92,20 @@
           <div class="card mb-4 shadow-sm">
             <img src="{{ job.image.url }}" class="imag-responsive bd-placeholder-img card-img-top" width="100" height="150"  role="img" />
             <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+              <p class="card-text"><b>{{ job.project_title }}</b></p>
+              <!--<div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">9 mins</small>
+              </div>-->
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ job.project_description }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
                 </div>
-                <small class="text-muted">9 mins</small>
+                <!--<small class="text-muted">9 mins</small>-->
               </div>
             </div>
           </div>

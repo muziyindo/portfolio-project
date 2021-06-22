@@ -11,9 +11,6 @@ myvenv\scripts\activate
 #to stop/deactivate virtual env on windows
 enter "deactivate" on cmd
 
-#Creating a new project
-django-admin startproject projectname
-
 #to create an app
 python manage.py startapp appName
 
@@ -22,23 +19,25 @@ python manage.py startapp appName
 
 NB: You need to install "pillow" with pip to work with images in python
 
-'''Python comes with some model(sql codes) that creates user,sessions, messages table that you will need, to add a user to the
-table,i.e after migrating, you do:''' 
-python manage.py createsuperuser
+pip freeze > requirements.txt # use this to get all the pagckages installed with pip for you project
 
-#to work with postgresql on django, you need to install the module "psycopg2" with pip
+pip install -r requirements.txt # to install dependencies in another environement
 
-
-
-#Add an app to a project
+Add an app to a project
 python3 manage.py startapp appname
-#Starting the server
+Starting the server
 python3 manage.py runserver
-#Creating migrations
+Creating migrations
 python3 manage.py makemigrations
-#Migrate the database
+Migrate the database
 python3 manage.py migrate
-#Creating a Super User for the admin panel
+Creating a Super User for the admin panel
 python3 manage.py createsuperuser
-#Collecting static files into one folder
+Collecting static files into one folder
 python3 manage.py collectstatic
+
+
+
+
+
+

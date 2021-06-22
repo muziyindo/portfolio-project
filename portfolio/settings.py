@@ -122,10 +122,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio/static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/' #this can be anytext/name
 
 #added this, MEDIA_ROOT means where media files(e.g images) should be saved, "os.path.join(BASE_DIR, 'media')" means it
 #should be saved in a "media" directory inside the base directory - portfolio-project
+#also note that, this media folder will be auto created when you run the server
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = "/media/" #added this also
+MEDIA_URL = "/media/" #added this also, this can be anytext/name
